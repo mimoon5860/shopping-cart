@@ -13,12 +13,13 @@ function updateCase(product, price, parameter) {
     cost.innerText = priceIs;
     totalCost()
 }
+function priceText(price) {
+    let thePrice = document.getElementById(price).innerText;
+    thePrice = parseInt(thePrice);
+    return thePrice;
+}
 function totalCost() {
-    let phonePrice = document.getElementById('phone-price').innerText;
-    phonePrice = parseInt(phonePrice);
-    let casePrice = document.getElementById('case-price').innerText;
-    casePrice = parseInt(casePrice);
-    const subTotal = phonePrice + casePrice;
+    const subTotal = priceText('phone-price') + priceText('case-price');
     const subTotalText = document.getElementById('sub-total');
     subTotalText.innerText = subTotal;
     const taxText = document.getElementById('tax-total')

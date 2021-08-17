@@ -20,11 +20,8 @@ function priceText(price) {
 }
 function totalCost() {
     const subTotal = priceText('phone-price') + priceText('case-price');
-    const subTotalText = document.getElementById('sub-total');
-    subTotalText.innerText = subTotal;
-    const taxText = document.getElementById('tax-total')
     const taxTotal = (subTotal * 5) / 100;
-    taxText.innerText = taxTotal;
-    const total = document.getElementById('total');
-    total.innerText = taxTotal + subTotal;
+    document.getElementById('sub-total').innerText = subTotal;
+    document.getElementById('tax-total').innerText = taxTotal;
+    document.getElementById('total').innerText = taxTotal + subTotal;
 }
